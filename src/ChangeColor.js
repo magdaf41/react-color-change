@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-
-
+import Buttons from './Buttons'
 
 class ChangeColor extends Component {
 
@@ -15,9 +14,11 @@ class ChangeColor extends Component {
 
     changeColor = (action) => {
         console.log('działa')
-        this.setState((prevState)=>{
+        let btnValue = action.target.innerText;
+
+        this.setState((prevState) => {
             return ({
-                color: 'blue'
+                color: btnValue,
             })
 
         });
@@ -28,15 +29,7 @@ class ChangeColor extends Component {
 
             <div>
                 <h2 className={this.state.color}>{this.props.text}</h2>
-                <button className='btn' onClick={this.changeColor}>
-                    red
-                </button>
-                <button className='btn' onClick={this.changeColor}>
-                    blue
-                </button>
-                <button className='btn' onClick={this.changeColor}>
-                    green
-                </button>
+                <Buttons buttonChangeColor = {this.changeColor}/>
             </div>
         );
     }

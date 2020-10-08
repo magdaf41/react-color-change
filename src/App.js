@@ -1,19 +1,24 @@
 import React from 'react';
 import './App.css';
-import Header from './Header'
+import ChangeColor from './ChangeColor';
+import Counter from './Counter';
+import ChangeHeaderTest from './ChangeHeaderText';
+
+
 
 function App() {
+
   return (
     <div>
-<Header text='to jest pierwszy nagłówek' color='red' />
+      <ChangeColor text='to jest pierwszy nagłówek' color='red' />
+      <ChangeColor text='to jest drugi nagłówek' color='blue' />
+      <ChangeColor text='to jest trzeci nagłówek' color='green' />
+      <ChangeHeaderTest button='Change Text'/>
+      <Counter initValue={0} />
+      <Counter initValue={108} />
 
-{/* <button onClick={Header.changeValue}> red </button> */}
-{/* <button> green </button>
-<button> blue </button> */}
-<Header text='to jest drugi nagłówek' color='blue'/>
-<Header text='to jest trzeci nagłówek' color='green'/>
     </div>
 
   );
-  }
+}
 export default App;
