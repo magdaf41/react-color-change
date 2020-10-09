@@ -3,14 +3,12 @@ import ButtonChangeText from './ButtonChangeText';
 
 class ChangeText extends Component {
 
-
     constructor(props) {
         super(props);
         this.state = {
             text: this.props.text,
         }
     }
-
 
     changeText = (action) => {
         console.log('działa')

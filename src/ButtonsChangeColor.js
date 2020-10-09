@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-function Buttons(props) {
+function ButtonsChngeColor(props) {
 
     return (
 
@@ -21,6 +21,6 @@ function Buttons(props) {
     );
 }
 
-export default Buttons
+export default ButtonsChngeColor
 
 

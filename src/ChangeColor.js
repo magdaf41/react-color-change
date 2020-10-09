@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import Buttons from './Buttons'
+import ButtonsChangeColor from './ButtonsChangeColor'
 
 class ChangeColor extends Component {
-
 
     constructor(props) {
         super(props);
@@ -10,7 +9,6 @@ class ChangeColor extends Component {
             color: this.props.color,
         }
     }
-
 
     changeColor = (action) => {
         console.log('działa')
@@ -29,7 +27,7 @@ class ChangeColor extends Component {
 
             <div>
                 <h2 className={this.state.color}>{this.props.text}</h2>
-                <Buttons buttonChangeColor = {this.changeColor}/>
+                <ButtonsChangeColor buttonChangeColor={this.changeColor} />
             </div>
         );
     }
